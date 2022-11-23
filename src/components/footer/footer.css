@@ -1,0 +1,27 @@
+.footer{
+    padding-top: 60px; 
+    padding-bottom: 30px;
+    background-color: var(--primary-color);
+}
+.footer .logo{
+    color:azure;
+}
+.footer_text{
+    line-height: 30px;
+    color: rgb(189, 189, 189);
+}
+.footer_quick-link ul li{
+    background-color: transparent !important;
+    color:white
+}
+
+.quick_links-title{
+    color: azure ;
+}
+.footer_copyright{
+    margin-top: 15px;
+    position: relative;
+    top: 15px;
+    text-align: center;
+   font-size:0.9rem ;
+}

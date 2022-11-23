@@ -1,0 +1,32 @@
+.product_item{
+    cursor: pointer;
+}
+
+.product_card-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product_info h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 15px;
+}
+.product_info span{
+    font-size: 0.9rem;
+}
+
+.product_card-bottom .price{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.product_card-bottom span i {
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    color: #fff;
+}
