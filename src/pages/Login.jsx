@@ -3,8 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Col, Container, Row, Form, FormGroup } from 'reactstrap'
 import Helmet from '../components/helmet/Helmet'
 import '../style/login.css'
-import { signInWithEmailAndPassword } from 'firebase/auth'
-import { auth } from '../firebase.config'
+
 import { toast } from 'react-toastify'
 
 
@@ -16,31 +15,6 @@ const Login = () => {
 
     const navigate = useNavigate()
 
-    const signIn = async (e) => {
-
-        e.preventDefault()
-        setLoading(true)
-
-        try {
-
-            const userCredential = await signInWithEmailAndPassword(auth, email, password)
-
-            const user = userCredential.user
-
-            console.log(user)
-
-            setLoading(false)
-            toast.success("Đăng nhập thành công")
-            navigate('/checkout')
-
-        } catch (error) {
-
-            setLoading(false)
-            toast.error(error.message)
-
-        }
-
-    }
 
     return (
         <>
@@ -64,7 +38,7 @@ const Login = () => {
 
                                             <h3 className='fw-bold fs-4 mb-4 '>Đăng nhập</h3>
 
-                                            <Form className='auth_form' onSubmit={signIn}>
+                                            <Form className='auth_form'>
 
                                                 <FormGroup className='form_group'>
                                                     <input type="email" placeholder='Email của bạn' value={email} onChange={(e) => setEmail(e.target.value)} />

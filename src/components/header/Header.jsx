@@ -5,7 +5,7 @@ import { Container, Nav, Row } from 'reactstrap'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import userIcon from '../../assets/images/user-icon.png'
 import { useSelector } from 'react-redux'
-import useAuth from '../../custom-hook/useAuth'
+
 
 
 const nav_link = [
@@ -29,7 +29,7 @@ const Header = () => {
 
     const navigate = useNavigate()
 
-    const { currentUser } = useAuth()
+
 
 
     useEffect(() => {
@@ -107,7 +107,7 @@ const Header = () => {
                                     <span className="sss">{totalQuantity}</span>
                                 </span>
 
-                                <div className='profile'>
+                                {/* <div className='profile'>
 
                                     <motion.img
                                         whileTap={{ scale: 2 }}
@@ -132,7 +132,7 @@ const Header = () => {
 
                                 </div>
 
-                                <p>{currentUser.displayName}</p>
+                                <p>{currentUser.displayName}</p> */}
 
                                 <div className="mobile_menu">
 

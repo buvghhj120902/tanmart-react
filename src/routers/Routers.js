@@ -14,7 +14,7 @@ import ProductDetails from '../pages/ProductDetails'
 import Checkout from '../pages/Checkout'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
-import ProtectedRoute from './ProtectedRoute';
+
 
 
 
@@ -30,9 +30,9 @@ const Routers = () => {
                 <Route
                     path='checkout'
                     element={
-                        <ProtectedRoute>
-                            <Checkout />
-                        </ProtectedRoute>
+
+                        <Checkout />
+
                     }
                 />
                 <Route path='login' element={<Login />} />
